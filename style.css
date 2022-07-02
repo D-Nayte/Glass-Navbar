@@ -38,12 +38,17 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 1;
-  color: rgba(168, 168, 168, 0.575);
   transition: all 200ms;
   text-shadow: 0 0 5px black;
 }
 
-#navigation .select:hover {
+a {
+  text-decoration: none;
+  color: rgba(168, 168, 168, 0.575);
+  transition: all 200ms;
+}
+
+#navigation .select:hover a {
   color: rgb(206, 206, 206);
   transform: scale(1.3);
 }
