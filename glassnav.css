@@ -48,7 +48,8 @@ a {
   transition: all 200ms;
 }
 
-#navigation .select:hover a {
+#navigation .select:hover a,
+#navigation .select:focus a {
   color: rgb(206, 206, 206);
   transform: scale(1.3);
 }
@@ -63,7 +64,7 @@ a {
   border-top-left-radius: 1em;
   border-top-right-radius: 1em;
   background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(35px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   z-index: 0;
 }
@@ -77,44 +78,50 @@ a {
 }
 
 #navigation .glower::after {
-  height: 75%;
-  width: 75%;
+  height: 100%;
+  width: 50%;
   content: "";
   background-color: red;
-  border-radius: 40%;
+  border-radius: 5%;
   z-index: -1;
-  transform: translateY(-1em);
+  transform: translateY(0.2em);
   transition: all 200ms;
+  filter: blur(3px);
+  opacity: 0;
 }
 
 #navigation > ul > li:nth-of-type(1):hover ~ .glower {
   transform: translateX(0%);
 }
 #navigation > ul > li:nth-of-type(1):hover ~ .glower:after {
+  opacity: 1;
   background-color: red;
-  box-shadow: 0 0 5px 0px rgba(255, 255, 255, 0.3), 0 0 5px 5px rgb(255, 71, 71);
+  box-shadow: 0 -5px 5px 0px rgba(255, 255, 255, 0.8), 0 -5px 5px 5px rgb(255, 97, 97);
 }
 
 #navigation > ul > li:nth-of-type(2):hover ~ .glower {
   transform: translateX(100%);
 }
 #navigation > ul > li:nth-of-type(2):hover ~ .glower:after {
+  opacity: 1;
   background-color: green;
-  box-shadow: 0 0 5px 0px rgba(255, 255, 255, 0.3), 0 0 5px 5px rgb(71, 255, 111);
+  box-shadow: 0 -4px 5px 0px rgba(255, 255, 255, 0.2), 0 -4px 5px 5px rgb(92, 255, 71);
 }
 
 #navigation > ul > li:nth-of-type(3):hover ~ .glower {
   transform: translateX(200%);
 }
 #navigation > ul > li:nth-of-type(3):hover ~ .glower:after {
+  opacity: 1;
   background-color: rgb(255, 0, 234);
-  box-shadow: 0 0 5px 0px rgba(255, 255, 255, 0.3), 0 0 5px 5px rgb(255, 71, 224);
+  box-shadow: 0 -5px 5px 0px rgba(255, 255, 255, 0.8), 0 -5px 5px 5px rgb(255, 71, 224);
 }
 
 #navigation > ul > li:nth-of-type(4):hover ~ .glower {
   transform: translateX(300%);
 }
 #navigation > ul > li:nth-of-type(4):hover ~ .glower:after {
+  opacity: 1;
   background-color: blueviolet;
-  box-shadow: 0 0 5px 0px rgba(255, 255, 255, 0.3), 0 0 5px 5px rgb(135, 71, 255);
+  box-shadow: 0 -5px 5px 0px rgba(255, 255, 255, 0.8), 0 -5px 5px 5px rgb(135, 71, 255);
 }

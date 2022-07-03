@@ -1,0 +1,177 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  position: relative;
+  height: 300vh;
+  background: -o-linear-gradient(45deg, orange 0%, blue 100%);
+  background: linear-gradient(45deg, orange 0%, blue 100%);
+  background-attachment: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+#navigation {
+  width: 100%;
+  display: inline-block;
+  position: fixed;
+  bottom: 0;
+}
+
+#navigation ul {
+  height: 4em;
+  position: relative;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 1em;
+  z-index: 6;
+}
+
+#navigation li {
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  z-index: 1;
+  -webkit-transition: all 200ms;
+  -o-transition: all 200ms;
+  transition: all 200ms;
+  text-shadow: 0 0 5px black;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(168, 168, 168, 0.575);
+  -webkit-transition: all 200ms;
+  -o-transition: all 200ms;
+  transition: all 200ms;
+}
+
+#navigation .select:hover a,
+#navigation .select:focus a {
+  color: rgb(206, 206, 206);
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+}
+
+#navigation .pseydo {
+  position: absolute;
+}
+
+#navigation .background {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(35px);
+  backdrop-filter: blur(35px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 0;
+}
+
+#navigation .glower {
+  height: 100%;
+  width: 25%;
+  z-index: -1;
+  background-color: transparent;
+  -webkit-transition: all 200ms;
+  -o-transition: all 200ms;
+  transition: all 200ms;
+}
+
+#navigation .glower::after {
+  height: 100%;
+  width: 50%;
+  content: "";
+  background-color: red;
+  border-radius: 5%;
+  z-index: -1;
+  -webkit-transform: translateY(0.2em);
+  -ms-transform: translateY(0.2em);
+  transform: translateY(0.2em);
+  -webkit-transition: all 200ms;
+  -o-transition: all 200ms;
+  transition: all 200ms;
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+  opacity: 0;
+}
+
+#navigation > ul > li:nth-of-type(1):hover ~ .glower {
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
+}
+#navigation > ul > li:nth-of-type(1):hover ~ .glower:after {
+  opacity: 1;
+  background-color: red;
+  -webkit-box-shadow: 0 -5px 5px 0px rgba(255, 255, 255, 0.8), 0 -5px 5px 5px rgb(255, 97, 97);
+  box-shadow: 0 -5px 5px 0px rgba(255, 255, 255, 0.8), 0 -5px 5px 5px rgb(255, 97, 97);
+}
+
+#navigation > ul > li:nth-of-type(2):hover ~ .glower {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+}
+#navigation > ul > li:nth-of-type(2):hover ~ .glower:after {
+  opacity: 1;
+  background-color: green;
+  -webkit-box-shadow: 0 -4px 5px 0px rgba(255, 255, 255, 0.2), 0 -4px 5px 5px rgb(92, 255, 71);
+  box-shadow: 0 -4px 5px 0px rgba(255, 255, 255, 0.2), 0 -4px 5px 5px rgb(92, 255, 71);
+}
+
+#navigation > ul > li:nth-of-type(3):hover ~ .glower {
+  -webkit-transform: translateX(200%);
+  -ms-transform: translateX(200%);
+  transform: translateX(200%);
+}
+#navigation > ul > li:nth-of-type(3):hover ~ .glower:after {
+  opacity: 1;
+  background-color: rgb(255, 0, 234);
+  -webkit-box-shadow: 0 -5px 5px 0px rgba(255, 255, 255, 0.8), 0 -5px 5px 5px rgb(255, 71, 224);
+  box-shadow: 0 -5px 5px 0px rgba(255, 255, 255, 0.8), 0 -5px 5px 5px rgb(255, 71, 224);
+}
+
+#navigation > ul > li:nth-of-type(4):hover ~ .glower {
+  -webkit-transform: translateX(300%);
+  -ms-transform: translateX(300%);
+  transform: translateX(300%);
+}
+#navigation > ul > li:nth-of-type(4):hover ~ .glower:after {
+  opacity: 1;
+  background-color: blueviolet;
+  -webkit-box-shadow: 0 -5px 5px 0px rgba(255, 255, 255, 0.8), 0 -5px 5px 5px rgb(135, 71, 255);
+  box-shadow: 0 -5px 5px 0px rgba(255, 255, 255, 0.8), 0 -5px 5px 5px rgb(135, 71, 255);
+}
